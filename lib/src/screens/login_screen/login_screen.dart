@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-import 'package:rocket_lab_technical/src/config/color_configs.dart';
 import 'package:rocket_lab_technical/src/screens/login_screen/views/login_surface.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -10,19 +8,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final themeText = theme.textTheme;
-    final themeColors = theme.colorScheme;
-  
-    final titleStyle = themeText.displayMedium!.copyWith(
-      color: ColorTokens.royalBlue
-    );
-
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Login", style: titleStyle),
-        backgroundColor: themeColors.onPrimary,
-      ),
       body: Stack(
         children: [
           Container(
@@ -34,7 +20,7 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
           const Center(
-            child: LoginSurface(),
+            child: SizedBox(width: 400, child: LoginSurface()),
           ),
         ],
       ),
