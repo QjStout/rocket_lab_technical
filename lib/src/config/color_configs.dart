@@ -9,8 +9,8 @@ class ColorConfigs {
     onSecondary: ColorTokens.white,
     error: ColorTokens.imperialRed,
     onError: ColorTokens.white,
-    surface: ColorTokens.roseQuarts,
-    onSurface: ColorTokens.white,
+    surface: ColorTokens.white,
+    onSurface: ColorTokens.charcoal,
   );
 }
 
