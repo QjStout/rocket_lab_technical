@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:rocket_lab_technical/src/config/color_configs.dart';
+import 'package:rocket_lab_technical/src/screens/login_screen/login_screen.dart';
 
 import 'sample_feature/sample_item_details_view.dart';
 import 'sample_feature/sample_item_list_view.dart';
@@ -60,9 +61,6 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             useMaterial3: true,
             colorScheme: ColorConfigs.scheme,
-            extensions: <ThemeExtension<dynamic>>{
-              ColorTokens()
-            }
           ),
           darkTheme: ThemeData.dark(),
           themeMode: settingsController.themeMode,
@@ -79,8 +77,10 @@ class MyApp extends StatelessWidget {
                   case SampleItemDetailsView.routeName:
                     return const SampleItemDetailsView();
                   case SampleItemListView.routeName:
-                  default:
                     return const SampleItemListView();
+                  case LoginScreen.routeName:
+                  default:
+                    return const LoginScreen();
                 }
               },
             );
