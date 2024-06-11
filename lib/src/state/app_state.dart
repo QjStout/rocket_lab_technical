@@ -18,5 +18,4 @@ class AppState extends ChangeNotifier {
     _loggedIn = false;
     notifyListeners();
   }
-  void isAuthorised() => _loggedIn;
 }
